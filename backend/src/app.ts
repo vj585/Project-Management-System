@@ -35,12 +35,19 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
-// Routes
+// Routes (mounted on /api)
 app.use('/api/health', healthRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/tasks', taskRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+
+// Routes (mounted on root, for Vercel Serverless direct invocation)
+app.use('/health', healthRoutes);
+app.use('/auth', authRoutes);
+app.use('/projects', projectRoutes);
+app.use('/tasks', taskRoutes);
+app.use('/dashboard', dashboardRoutes);
 
 // 404 handler
 app.use((req: Request, res: Response, next: NextFunction) => {
