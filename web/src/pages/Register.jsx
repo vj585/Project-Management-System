@@ -16,7 +16,7 @@ const registerSchema = z.object({
 const Register = () => {
   const { register: registerUser } = useAuth();
   const navigate = useNavigate();
-  
+
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -40,13 +40,13 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-zinc-950 flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      
+
       {/* Background Lighting */}
       <div className="ambient-light-secondary top-1/4 left-1/4 animate-pulse-glow" />
       <div className="ambient-light-primary bottom-1/4 right-1/4 animate-pulse-glow" style={{ animationDelay: '2s' }} />
 
       <div className="w-full max-w-md relative z-10 animate-fade-in">
-        
+
         {/* Logo/Header */}
         <div className="flex flex-col items-center text-center mb-10">
           <div className="w-20 h-20 rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(236,72,153,0.4)] mb-6 relative group animate-float bg-black/20">
@@ -80,7 +80,7 @@ const Register = () => {
                 <input
                   {...register('fullName')}
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Nicolas"
                   className={cn("input-field pl-12 h-14", errors.fullName && "border-pink-500/50 focus:ring-pink-500/20 focus:border-pink-500")}
                 />
               </div>
