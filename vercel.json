@@ -6,7 +6,7 @@
       "framework": "express",
       "installCommand": "npm install",
       "buildCommand": "npm run vercel-build",
-      "entrypoint": "src/index.ts"
+      "entrypoint": "dist/index.js"
     },
     "web": {
       "root": "web",
