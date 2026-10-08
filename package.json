@@ -1,0 +1,8 @@
+{
+  "name": "project-management-system",
+  "private": true,
+  "workspaces": [
+    "web",
+    "backend"
+  ]
+}
